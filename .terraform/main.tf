@@ -56,36 +56,3 @@ module "route53_www" {
   aws_route53_record_name         = local.aws_route53_record_name_www
   aws_route53_record_type         = local.aws_route53_record_type_www
 }
-
-# resource "aws_internet_gateway" "internet_gateway" {
-#   vpc_id = aws_default_vpc.default_vpc.id
-# }
-
-# resource "aws_route_table" "route_table" {
-#   vpc_id = aws_default_vpc.default_vpc.id
-
-#   route {
-#     cidr_block = "0.0.0.0/0"
-#     gateway_id = aws_internet_gateway.internet_gateway.id
-#   }
-
-#   route {
-#     ipv6_cidr_block = "::/0"
-#     gateway_id      = aws_internet_gateway.internet_gateway.id
-#   }
-# }
-
-# resource "aws_route_table_association" "route_table_association_1" {
-#   route_table_id = aws_route_table.route_table.id
-#   subnet_id      = aws_default_subnet.default_subnet_1.id
-# }
-
-# resource "aws_route_table_association" "route_table_association_2" {
-#   route_table_id = aws_route_table.route_table.id
-#   subnet_id      = aws_default_subnet.default_subnet_2.id
-# }
-
-# resource "aws_route_table_association" "route_table_association_3" {
-#   route_table_id = aws_route_table.route_table.id
-#   subnet_id      = aws_default_subnet.default_subnet_3.id
-# }

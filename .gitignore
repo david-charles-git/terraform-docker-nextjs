@@ -35,6 +35,7 @@ yarn-error.log*
 next-env.d.ts
 
 # terraform
+.terraform/.aws
 .terraform/.terraform
 .terraform/*.hcl
 .terraform/*.tfstate
