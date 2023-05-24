@@ -1,0 +1,74 @@
+{
+	"taskDefinitionArn": "arn:aws:ecs:eu-west-1:890193199295:task-definition/nextjs-docker-task-family",
+	"containerDefinitions": [
+		{
+			"name": "nextjs-docker-task",
+			"image": "890193199295.dkr.ecr.eu-west-1.amazonaws.com/nextjs-docker",
+			"cpu": 0,
+			"portMappings": [
+				{
+					"containerPort": 3000,
+					"hostPort": 3000,
+					"protocol": "tcp",
+					"appProtocol": "http"
+				}
+			],
+			"essential": true,
+			"environment": [],
+			"mountPoints": [],
+			"volumesFrom": [],
+			"logConfiguration": {
+				"logDriver": "awslogs",
+				"options": {
+					"awslogs-create-group": "true",
+					"awslogs-group": "/ecs/nextjs-docker-task",
+					"awslogs-region": "eu-west-1",
+					"awslogs-stream-prefix": "ecs"
+				}
+			}
+		}
+	],
+	"family": "nextjs-docker-task-family",
+	"taskRoleArn": "arn:aws:iam::890193199295:role/ecs-task-execution-role",
+	"executionRoleArn": "arn:aws:iam::890193199295:role/ecs-task-execution-role",
+	"networkMode": "awsvpc",
+	"volumes": [],
+	"status": "ACTIVE",
+	"requiresAttributes": [
+		{
+			"name": "com.amazonaws.ecs.capability.logging-driver.awslogs"
+		},
+		{
+			"name": "ecs.capability.execution-role-awslogs"
+		},
+		{
+			"name": "com.amazonaws.ecs.capability.ecr-auth"
+		},
+		{
+			"name": "com.amazonaws.ecs.capability.docker-remote-api.1.19"
+		},
+		{
+			"name": "com.amazonaws.ecs.capability.task-iam-role"
+		},
+		{
+			"name": "ecs.capability.execution-role-ecr-pull"
+		},
+		{
+			"name": "com.amazonaws.ecs.capability.docker-remote-api.1.18"
+		},
+		{
+			"name": "ecs.capability.task-eni"
+		},
+		{
+			"name": "com.amazonaws.ecs.capability.docker-remote-api.1.29"
+		}
+	],
+	"placementConstraints": [],
+	"compatibilities": ["EC2", "FARGATE"],
+	"requiresCompatibilities": ["FARGATE"],
+	"cpu": "256",
+	"memory": "512",
+	"registeredAt": "2023-05-24T01:00:03.998Z",
+	"registeredBy": "arn:aws:iam::890193199295:user/awsdockertest-david",
+	"tags": []
+}

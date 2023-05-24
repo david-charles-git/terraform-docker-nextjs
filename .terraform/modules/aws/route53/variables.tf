@@ -14,12 +14,6 @@ variable "aws_route53_record_type" {
   default     = "A"
 }
 
-variable "aws_route53_record_ttl" {
-  description = "AWS Route 53 Record TTL"
-  type        = string
-  default     = "300"
-}
-
 variable "aws_route53_record_alb_dns_name" {
   description = "AWS Route 53 Record ALB DNS Name"
   type        = string

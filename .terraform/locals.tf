@@ -15,13 +15,9 @@ locals {
   aws_ecs_service_name          = "nextjs-docker-service"
   aws_ecs_service_desired_count = 1
 
-  aws_alb_listener_port = 80
-
   aws_route53_record_name_root = "project9.link"
   aws_route53_record_type_root = "A"
-  aws_route53_record_ttl_root  = "300"
 
   aws_route53_record_name_www = "www.project9.link"
   aws_route53_record_type_www = "A"
-  aws_route53_record_ttl_www  = "300"
 }

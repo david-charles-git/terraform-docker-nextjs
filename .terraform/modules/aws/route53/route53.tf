@@ -1,8 +1,7 @@
-resource "aws_route53_record" "example_record" {
+resource "aws_route53_record" "record" {
   zone_id = var.aws_route53_record_zone_id
   name    = var.aws_route53_record_name
   type    = var.aws_route53_record_type
-  ttl     = var.aws_route53_record_ttl
 
   alias {
     name                   = var.aws_route53_record_alb_dns_name

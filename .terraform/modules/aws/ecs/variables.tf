@@ -74,8 +74,7 @@ variable "aws_ecs_service_security_groups" {
   type        = list(string)
 }
 
-variable "aws_alb_listener_port" {
-  description = "AWS Application Load Balancer Listener Port"
-  type        = number
-  default     = 80
+variable "aws_alb_listener_HTTPS_certificate_arn" {
+  description = "AWS ALB Listener HTTPS Certifiate ARN"
+  type        = string
 }
